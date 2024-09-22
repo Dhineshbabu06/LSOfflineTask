@@ -1,0 +1,353 @@
+    /* Offline Task */
+
+    .text-styled {
+      font-size: 30px;
+      font-family: 'Arial', sans-serif;
+      color: #4a4a4a;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      position: relative;
+      display: inline-block;
+      margin: 20px 0;
+      padding: 10px;
+      transition: color 0.3s ease;
+    }
+    
+    .text-styled::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 5px; /* Position of the line */
+      height: 4px;
+      background: linear-gradient(90deg, #ff6f61, #2575fc);
+      transform: scaleX(0);
+      transition: transform 0.5s ease;
+    }
+    
+    .text-styled {
+      color: #2575fc; /* Change text color on hover */
+    }
+    
+    .text-styled:hover::before {
+      transform: scaleX(1); /* Underline effect on hover */
+    }
+    
+    
+  .TableContainer{
+    margin: 0% 20%;
+  }
+
+  .overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+
+.popup {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    width: 90%; /* Use percentage for responsiveness */
+    max-width: 350px; /* Maintain a max width */
+    text-align: center;
+    position: relative;
+    animation: fadeIn 0.3s ease;
+}
+
+.close-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 1.2em;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-btn:hover {
+    color: #ff0000;
+}
+
+h4 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-control {
+  width: 100%;
+  max-width: 400px; /* Set a max width for larger screens */
+  padding: 0.625rem; /* 10px in rem */
+  border: 1px solid #ccc;
+  border-radius: 0.3125rem; /* 5px in rem */
+  font-size: 1rem; /* 16px */
+}
+
+.form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0.3125rem rgba(0, 123, 255, 0.5); /* 5px in rem */
+}
+
+/* Additional media query for smaller screens */
+@media (max-width: 600px) {
+  .form-control {
+      max-width: 90%; /* Full width on smaller screens */
+      padding: 0.5rem; /* Slightly reduced padding */
+  }
+}
+
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.popup .form-control {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+/* Media queries for smaller devices */
+@media (max-width: 600px) {
+    .popup {
+        width: 85%; /* Increase width on smaller devices */
+        padding: 20px; /* Adjust padding */
+    }
+
+    .popup .form-control {
+      width: 90%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1em;
+  }
+
+    .close-btn {
+        font-size: 1em; /* Smaller close button */
+    }
+}
+
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  flex-wrap: wrap; /* Allow wrapping */
+}
+
+.pagination-button,
+.pagination-number {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin: 5px; /* Consistent spacing */
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.pagination-button:disabled {
+  background: #c0c0c0;
+  cursor: not-allowed;
+}
+
+.pagination-number.active {
+  background: #0056b3;
+}
+
+.pagination-button:hover,
+.pagination-number:hover {
+  background: #0056b3;
+}
+.searchcontainer {
+  margin: 0; /* Reset margin */
+  width: 30%; /* Base width */
+  margin-left: 65%; /* Positioning */
+  text-align: center; /* Center search input */
+  box-sizing: border-box; /* Include padding/border in width */
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+  .searchcontainer {
+    width: 80%; /* Wider on smaller screens */
+    margin-left: 10%; /* Center it more effectively */
+  }
+}
+
+/* Media Query for Extra Small Screens */
+@media (max-width: 480px) {
+  .searchcontainer {
+    width: 90%; /* Almost full width on very small screens */
+    margin-left: 5%; /* Adjust margin for centering */
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .pagination-button,
+  .pagination-number {
+    padding: 8px 12px; /* Smaller padding */
+    margin: 4px; /* Adjust margin */
+    font-size: 14px; /* Slightly smaller font */
+  }
+}
+
+@media (max-width: 480px) {
+  .pagination {
+    justify-content: space-around; /* Distribute space evenly */
+    margin-top: 15px; /* Slightly reduce top margin */
+  }
+
+  .pagination-button,
+  .pagination-number {
+    padding: 10px; /* Make buttons larger for touch devices */
+    margin: 2px; /* Tighter margin */
+    font-size: 16px; /* Larger font for better readability */
+  }
+
+  .searchcontainer {
+    margin: 0; /* Reset margin */
+    width: 100%; /* Full width */
+    text-align: center; /* Center search input */
+  }
+}
+
+.icon {
+  color: #007bff;;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.trashicon {
+  color: #007bff;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.deleteicon {
+  color: #BA0021;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .trashicon, .deleteicon {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 992px) {
+  .trashicon, .deleteicon {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .trashicon, .deleteicon {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .trashicon, .deleteicon {
+    font-size: 10px;
+  }
+}
+
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #f9f9f9; /* Light gray for odd rows */
+}
+
+.table-striped th {
+  background-color: #007bff; /* Green header */
+  color: white; /* White text for header */
+  padding: 10px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.table-striped td {
+  padding: 10px;
+  border: 1px solid #ddd; /* Light gray border */
+}
+
+.table-striped tbody tr:hover {
+  background-color: #f1f1f1; /* Light hover effect */
+}
+
+.trashicon, .deleteicon {
+  cursor: pointer; /* Change cursor to pointer */
+  margin: 0 5px; /* Space between icons */
+}
+
+.trashicon:hover, .deleteicon:hover {
+  color: #f44336; /* Red on hover for trash icon */
+}
+
+.trashicon {
+  color: #2196F3; /* Blue for edit icon */
+}
